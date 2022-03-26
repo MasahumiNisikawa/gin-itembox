@@ -1,0 +1,23 @@
+<head>
+</head>
+<body>
+<div>
+    <h2>追加</h2>
+    <form method="post" action="/new">
+        <p>名前<input type="text" name="name" size="30" placeholder="入力してください" ></p>
+        <p>個数<input type="number" name="menge"></p>
+        <p>仕入れ先<input type="text" name="einkauf" size="30" placeholder="入力してください" ></p>
+        <p>金額<input type="number" name="preis"></p>
+        <p><input type="submit" value="登録"></p>
+    </form>
+
+    <ul>
+        {{ range .items }}
+            <li>内容：{{ .Name }}、個数：{{ .Menge }}、仕入れ先:{{.Einkauf}}、金額:{{.Preis}}
+                <label><a href="/detail/{{.ID}}">編集</a></label>
+                <label><a href="/delete_check/{{.ID}}">削除</a></label>
+            </li>
+        {{end}}
+    </ul>
+</div>
+</body>

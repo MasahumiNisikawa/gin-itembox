@@ -1,0 +1,18 @@
+<head>
+    
+</head>
+<body>
+<h1>削除確認</h1>
+<p>本当に削除しますか？</p>
+<ul>
+    <li>名前： {{.item.Name}}</li>
+    <li>個数： {{.item.Menge}}</li>
+    <li>仕入れ先： {{.item.Einkauf}}</li>
+    <li>金額： {{.item.Preis}}</li>
+</ul>
+
+<form method="post" action="/delete/{{.item.ID}}">
+    <p><input type="submit" value="削除"></p>
+    <p><a href="/">戻る</a></p>
+</form>
+</body>
