@@ -85,6 +85,7 @@ func dbGetOne(id int) Item {
 
 func main()  {
 	router := gin.Default()
+	router.Static("/assets", "./assets")
 	router.LoadHTMLGlob("templates/*.html")
 	// router.Static("/assets", "assets")
 

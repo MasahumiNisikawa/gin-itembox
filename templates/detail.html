@@ -1,18 +1,17 @@
 <head>
-   
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </head>
 <body>
-<h2>aaa</h2>
-
-<p>{{.user.ID}}</p>
-<p>{{.user.Name}}</p>
-<p>{{.user.Age}}</p>
-
-<form method="post" action="/update/{{.item.ID}}">
-    <p>名前<input type="text" name="name" size="30" value="{{.item.Name}}" ></p>
-    <p>個数<input type="number" name="menge"></p>
-    <p>仕入れ先<input type="text" name="einkauf" size="30" placeholder="入力してください" ></p>
-    <p>金額<input type="number" name="preis"></p>
-    <p><input type="submit" value="登録"></p>
-</form>
+    <div div class="container-sm">
+        <h2>在庫編集</h2>
+        <form method="post" action="/update/{{.item.ID}}">
+            <span class="input-group-text" id="inputGroup-sizing-sm">名前</span><input class="input-group input-group-sm mb-3" type="text" name="name" size="30" placeholder="入力してください" >
+            <span class="input-group-text" id="inputGroup-sizing-sm">個数</span><input class="input-group input-group-sm mb-3" type="number" name="menge">
+            <span class="input-group-text" id="inputGroup-sizing-sm">仕入れ先</span><input class="input-group input-group-sm mb-3" type="text" name="einkauf" size="30" placeholder="入力してください" ></p>
+            <span class="input-group-text" id="inputGroup-sizing-sm">金額</span><input class="input-group input-group-sm mb-3" type="number" name="preis"></p>
+            <p><input class="btn btn-outline-danger" type="submit" value="登録"></p>
+        </form>
+    </div>
 </body>
